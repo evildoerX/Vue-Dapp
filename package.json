@@ -27,7 +27,6 @@
     "truffle-hdwallet-provider": "0.0.3",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0",
-    "vuetify": "^1.1.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

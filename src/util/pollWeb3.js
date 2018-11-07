@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import {store} from '../store/'
+import store from '../store'
 
 let pollWeb3 = function (state) {
   let web3 = window.web3
@@ -32,7 +32,7 @@ let pollWeb3 = function (state) {
         })
       }
     }
-  }, 500)
+  }, 5000)
 }
 
 export default pollWeb3

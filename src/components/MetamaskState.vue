@@ -1,12 +1,10 @@
 <template>
   <div class='metamask-info'>
-  <v-toolbar-items>
-    <v-btn flat v-if="isInjected" id="has-metamask"><i aria-hidden="true" class="fa fa-check"></i> Metamask installed</v-btn>
-    <v-btn flat v-else id="no-metamask"><i aria-hidden="true" class="fa fa-times"></i> Metamask not found</v-btn>
-    <v-btn flat v-if="isInjected" > Network: {{ network }}</v-btn>
-    <v-btn flat v-if="isInjected"> Account: {{ coinbase.substr(0, 6) + '...' }}</v-btn>
-    <v-btn flat v-if="isInjected"> {{ ethBalance }} Eth</v-btn>
-  </v-toolbar-items>
+    <div v-if="isInjected" id="has-metamask">Metamask installed</div>
+    <div v-else id="no-metamask"> Metamask not found</div>
+    <div v-if="isInjected" > Network: {{ network }}</div>
+    <div v-if="isInjected"> Account: {{ coinbase.substr(0, 6) + '...' }}</div>
+    <div v-if="isInjected"> balance: {{balance}}||Eth: {{ ethBalance }}</div>
   </div>
 </template>
 

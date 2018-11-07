@@ -12,13 +12,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import Web3 from 'web3'
 import router from './router'
-import Vuetify from 'vuetify'
 import store from './store'
-// Ensure you are using css-loader
-import 'vuetify/dist/vuetify.min.css'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+
+Vue.use(iView)
 
 Vue.config.productionTip = false
-Vue.use(Vuetify)
 
 /* eslint-disable */
 window.addEventListener('load', async () => {
