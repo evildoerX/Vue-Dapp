@@ -1,13 +1,10 @@
 .DS_Store
+build/
 node_modules/
-dist/static
-dist/index.html
+dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
 
 # Editor directories and files
 .idea
@@ -16,29 +13,3 @@ selenium-debug.log
 *.njsproj
 *.sln
  .env
-build_webpack/* 
-.DS_Store
-
-
-node_modules
-
-
-lib/core/metadata.js
-
-lib/core/MetadataBlog.js
-
-
-website/translated_docs
-
-website/build/
-
-website/yarn.lock
-
-website/node_modules
-
-website/i18n/*
- 
-#docs/*
-#!docs/components/
-*.zip
-solcdog
