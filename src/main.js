@@ -13,7 +13,7 @@ import App from './App.vue'
 import Web3 from 'web3'
 import router from './router'
 import Vuetify from 'vuetify'
-import { store } from './store/'
+import store from './store'
 // Ensure you are using css-loader
 import 'vuetify/dist/vuetify.min.css'
 
