@@ -12,8 +12,6 @@ export default {
   },
   mutations: {
     registerWeb3Instance (state, payload) {
-      console.log('registerWeb3instance Mutation being executed', payload)
-      console.log('state', state)
       let result = payload
       let web3Copy = state
       web3Copy.coinbase = result.coinbase
@@ -25,27 +23,22 @@ export default {
       pollWeb3()
     },
     pollWeb3Instance (state, payload) {
-      console.log('pollWeb3Instance mutation being executed', payload)
       state.coinbase = payload.coinbase
       state.balance = parseInt(payload.balance, 10)
     },
     registerContractInstance (state, payload) {
-      console.log('Casino contract instance: ', payload)
       state.contractInstance = () => payload
     }
   },
   actions: {
     registerWeb3 ({commit}) {
-      console.log('registerWeb3 Action being executed')
       getWeb3.then(result => {
-        console.log('committing result to registerWeb3Instance mutation')
         commit('registerWeb3Instance', result)
       }).catch(e => {
         console.log('error in action registerWeb3', e)
       })
     },
     pollWeb3 ({commit}, payload) {
-      console.log('pollWeb3 action being executed')
       commit('pollWeb3Instance', payload)
     }
   }

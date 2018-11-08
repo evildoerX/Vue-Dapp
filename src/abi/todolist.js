@@ -17,9 +17,7 @@ const TodoListLogic = {
       self.contract.deployed().then(instance => {
         self.instance = instance
         resolve()
-        console.log('Gay sex TODOLIST')
       }).catch(err => {
-        console.log('Not gay sex TODOLIST')
         reject(err)
       })
     })
@@ -27,16 +25,13 @@ const TodoListLogic = {
 
   addTodo: function (content) {
     let self = this
-    console.log('What is Going on')
     return new Promise((resolve, reject) => {
       self.instance.addTodo(
         content,
         {from: window.web3.eth.accounts[0]}
       ).then(tx => {
-        console.log('Testing GAY SEX')
         resolve(tx)
       }).catch(err => {
-        console.log('More Testing')
         reject(err)
       })
     })
@@ -50,7 +45,6 @@ const TodoListLogic = {
         todoId,
         {from: window.web3.eth.accounts[0]}
       ).then((tx) => {
-        // resolve(window.web3.toUtf8(pseudo))
         resolve(tx)
       }).catch(err => {
         reject(err)
@@ -78,24 +72,15 @@ const TodoListLogic = {
     const FIELD_OWNERS = 2
     const FIELD_ISCOMPLETEDS = 3
     const FIELD_TIMESTAMPS = 4
-    // Promise chain, get the lastId,
-    // and then get all the todos
     return new Promise((resolve, reject) => {
-      console.log('Testing GAY SEX')
       self.instance.lastIds.call(
         window.web3.eth.accounts[0]
       ).then((numTodos) => {
-        // resolve(window.web3.toUtf8(pseudo))
-        // resolve(numTodos)
-        // console.log(numTodos)
         numOfTodos = numTodos.toNumber()
-        console.log(numOfTodos)
-        // @see https://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n
         const todoItems = Array.from(Array(numOfTodos).keys())
         self.instance.returnAllTodos.call(
           todoItems, {from: window.web3.eth.accounts[0]}
         ).then((todoList) => {
-          console.log(todoList)
           for (let i = 0; i < numOfTodos; i++) {
             let todo = {
               ids: todoList[FIELD_IDS][i].toNumber(),
@@ -105,14 +90,12 @@ const TodoListLogic = {
               timestamps: this.timeConverter(todoList[FIELD_TIMESTAMPS][i].toNumber())
             }
             todoListStruct.push(todo)
-            console.log(todoListStruct)
           }
           resolve(todoListStruct)
         })
       })
       .catch(err => {
         console.log(err)
-        console.log('error message')
         reject(err)
       })
     })
