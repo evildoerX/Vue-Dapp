@@ -1,0 +1,167 @@
+{
+  "contractName": "DiviesInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\n\ninterface DiviesInterface {\n    function deposit() external payable;\n}",
+  "sourcePath": "/Users/ch/Dapp/Vue-Dapp/contracts/interface/DiviesInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/ch/Dapp/Vue-Dapp/contracts/interface/DiviesInterface.sol",
+    "exportedSymbols": {
+      "DiviesInterface": [
+        8186
+      ]
+    },
+    "id": 8187,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8182,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 8186,
+        "linearizedBaseContracts": [
+          8186
+        ],
+        "name": "DiviesInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 8185,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8183,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "74:2:7"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 8184,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:0:7"
+            },
+            "scope": 8186,
+            "src": "58:36:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 8187,
+        "src": "26:70:7"
+      }
+    ],
+    "src": "0:96:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ch/Dapp/Vue-Dapp/contracts/interface/DiviesInterface.sol",
+    "exportedSymbols": {
+      "DiviesInterface": [
+        8186
+      ]
+    },
+    "id": 8187,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8182,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 8186,
+        "linearizedBaseContracts": [
+          8186
+        ],
+        "name": "DiviesInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 8185,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8183,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "74:2:7"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 8184,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:0:7"
+            },
+            "scope": 8186,
+            "src": "58:36:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 8187,
+        "src": "26:70:7"
+      }
+    ],
+    "src": "0:96:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-11-08T02:57:58.272Z"
+}
